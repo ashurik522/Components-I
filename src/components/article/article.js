@@ -57,7 +57,8 @@ function articleMaker(articleData){
   aParagraph1.textContent = articleData.firstParagraph;
   aParagraph2.textContent = articleData.secondParagraph;
   aParagraph3.textContent = articleData.thirdParagraph;
-  expandButton.textContent = "+";
+  expandButton.textContent = '\u2b07';
+  
   
   expandButton.addEventListener("click", ()=>{
     articleContainer.classList.toggle("article-open")
@@ -68,5 +69,7 @@ function articleMaker(articleData){
 articleData.forEach(data =>{
   const dataElem = articleMaker(data);
   document.querySelector(".articles").appendChild(dataElem);
+  
 })
 
+document.querySelector("span").style.alignItems = "right"
